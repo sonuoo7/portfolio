@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(5, 0, 0);
+  color: #fff;
+}
+#header {
+  width: 100%;
+  height: 120vh;
+  background-image: url(./background.png);
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  padding: 5px 5%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  padding: 10px;
+  width: 150px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 10px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.header-text {
+  margin-top: 20%;
+  font-size: 25px;
+}
+.header-text h1 {
+  font-size: 50px;
+  margin-top: 20px;
+}
+.header-text h1 span {
+  color: rgb(14, 170, 218);
+}
+.header-text h1 span
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ......................About Me...................... */
+
+#about {
+  /* margin: 34px; */
+  padding: 70px 0;
+  color: white;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  /* padding-top: 30px; */
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-2 {
+  flex-basis: 60%;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  /* padding: 10px; */
+  margin: 20px;
+}
+p {
+  font-size: 20px;
+  /* font-family: "Fira Sans", sans-serif; */
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+p span {
+  color: rgb(228, 111, 136);
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 18px;
+  font-weight: bold;
+  color: aqua;
+  cursor: pointer;
+  position: relative;
+  transition: .5s;
+}
+.tab-links:hover{
+  background: black;
+  color: white;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 15px 0;
+}
+.tab-contents ul li span {
+  color: rgb(230, 25, 137);
+  font-size: 19px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+/* .....................services section............................ */
+
+#services {
+  padding: 30px 0;
+  
+}
+
+#services h1 {
+  text-shadow: #ff004f;
+  
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: bagrounf 0.5s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover {
+  background: #db255f;
+  transform: translate(-10px);
+}
+
+/* ..........................portfolio............................. */
+
+#portfolio {
+  padding: 40px 0;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 6fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #29040f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-size: 34px;
+  color: rgb(11, 185, 185);
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: 'Fira Sans', sans-serif;
+}
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.7s;
+}
+.btn:hover {
+  background: #ff004f;
+}
+
+/* .......................contact info............................. */
+
+.contact-left {
+  flex-basis: 35%;
+  /* position: relative; */
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icon {
+  margin-top: 30px;
+}
+.social-icon a {
+  text-decoration: none;
+  font-size: 40px;
+  margin-right: 25px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform(0.5s);
+}
+.social-icon a:hover {
+  color: #ff044f;
+  transform: translate(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+.btn.btn2:hover{
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* ......................css for small screen.......................... */
+@media only screen and (max-width: 600px) {
+  #header {
+    background-image: url(sonu.jpg);
+  }
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+}
